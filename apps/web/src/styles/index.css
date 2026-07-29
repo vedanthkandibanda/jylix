@@ -1,0 +1,11 @@
+/* ==========================================================================
+   JYLIX GLOBAL STYLE ENTRY
+   ==========================================================================
+   Import order is important.
+   ========================================================================== */
+
+@import "./reset.css";
+@import "./variables.css";
+@import "./globals.css";
+@import "./animations.css";
+@import "./utilities.css";

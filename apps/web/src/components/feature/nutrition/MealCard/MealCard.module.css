@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+
+  color: var(--color-text-primary);
+}
+
+.nutrition {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: var(--spacing-md);
+}
+
+.nutrition div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.nutrition span {
+  font-size: var(--font-size-sm);
+
+  color: var(--color-text-secondary);
+}
+
+.nutrition strong {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .nutrition {
+    grid-template-columns: 1fr;
+  }
+}

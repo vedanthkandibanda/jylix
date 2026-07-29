@@ -1,0 +1,16 @@
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+
+  width: 100%;
+}
+
+.message {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+}

@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--spacing-xl);
+}
+
+.heading {
+  margin: 0;
+
+  font-size: var(--font-size-2xl);
+
+  font-weight: var(--font-weight-bold);
+
+  color: var(--color-text-primary);
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: var(--spacing-lg);
+}

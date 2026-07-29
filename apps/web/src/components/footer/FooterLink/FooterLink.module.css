@@ -1,0 +1,32 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+
+  width: fit-content;
+
+  color: var(--color-text-secondary);
+  text-decoration: none;
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+.link:active {
+  transform: translateY(1px);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}

@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-xl);
+
+  font-weight: var(--font-weight-semibold);
+}
+
+.stats {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.stats div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--spacing-xs);
+}
+
+.label {
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+}
+
+.stats p {
+  margin: 0;
+
+  font-weight: var(--font-weight-semibold);
+}

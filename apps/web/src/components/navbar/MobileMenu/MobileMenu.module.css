@@ -1,0 +1,96 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+
+  z-index: var(--z-overlay);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: min(320px, 85vw);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-background-secondary);
+  border-left: 1px solid var(--color-border);
+
+  box-shadow: var(--shadow-xl);
+
+  padding: var(--spacing-lg);
+
+  z-index: var(--z-modal);
+
+  animation: slideIn 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  margin-bottom: var(--spacing-xl);
+}
+
+.closeButton {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+
+  color: var(--color-text-primary);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.closeButton:hover {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+}
+
+.closeButton:active {
+  transform: scale(0.95);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+
+  flex: 1;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

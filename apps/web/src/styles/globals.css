@@ -1,0 +1,39 @@
+/* ==========================================================================
+   JYLIX GLOBAL STYLES
+   ==========================================================================
+   Global application styles.
+   Depends on:
+   - reset.css
+   - variables.css
+   ========================================================================== */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-background-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

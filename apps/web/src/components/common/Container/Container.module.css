@@ -1,0 +1,30 @@
+/* apps/web/src/components/common/Container/Container.module.css */
+
+/**
+ * ============================================================
+ * JYLIX CONTAINER
+ * ============================================================
+ * Provides a responsive content container with a maximum width.
+ */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 32px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .container {
+    padding-inline: 48px;
+  }
+}

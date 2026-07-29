@@ -1,0 +1,63 @@
+.divider {
+  width: 100%;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.vertical {
+  width: 1px;
+  height: 100%;
+
+  background-color: var(--color-border);
+
+  flex-shrink: 0;
+}
+
+.line {
+  flex: 1;
+
+  height: 1px;
+
+  background-color: var(--color-border);
+}
+
+.label {
+  white-space: nowrap;
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.default .line {
+  background-color: var(--color-border);
+}
+
+.primary .line {
+  background-color: var(--color-primary);
+}
+
+.vertical.default {
+  background-color: var(--color-border);
+}
+
+.vertical.primary {
+  background-color: var(--color-primary);
+}
+
+.small .line {
+  height: 1px;
+}
+
+.medium .line {
+  height: 2px;
+}
+
+.large .line {
+  height: 3px;
+}

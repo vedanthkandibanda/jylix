@@ -1,0 +1,144 @@
+/* ==========================================================================
+   JYLIX UTILITIES
+   ==========================================================================
+   Small reusable helper classes.
+   Keep this file minimal and framework-agnostic.
+   ========================================================================== */
+
+/* ==========================================================================
+   ACCESSIBILITY
+   ========================================================================== */
+
+.visually-hidden,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* ==========================================================================
+   DISPLAY
+   ========================================================================== */
+
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* ==========================================================================
+   FLEX
+   ========================================================================== */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   TEXT
+   ========================================================================== */
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* ==========================================================================
+   OVERFLOW
+   ========================================================================== */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   SIZING
+   ========================================================================== */
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* ==========================================================================
+   POINTER
+   ========================================================================== */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+/* ==========================================================================
+   USER SELECT
+   ========================================================================== */
+
+.select-none {
+  user-select: none;
+}
+
+.select-all {
+  user-select: all;
+}
