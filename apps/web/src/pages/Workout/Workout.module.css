@@ -1,0 +1,464 @@
+.page {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+
+/* HEADER */
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.eyebrow,
+.cardEyebrow {
+  margin: 0 0 8px;
+
+  color: #a3e635;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+}
+
+.subtitle {
+  max-width: 650px;
+
+  margin: 10px 0 0;
+
+  color: #808080;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* SUMMARY */
+
+.summaryGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.summaryCard {
+  min-height: 126px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summaryLabel {
+  color: #b3b3b3;
+
+  font-size: 12px;
+}
+
+.summaryValue {
+  margin-top: 10px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.summaryHint {
+  margin-top: 5px;
+
+  color: #808080;
+
+  font-size: 11px;
+}
+
+.calories {
+  color: #f97316;
+}
+
+
+/* PROGRESS */
+
+.progressCard {
+  padding: 26px;
+}
+
+.progressHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+.progressHeader h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 20px;
+}
+
+.progressValue {
+  color: #a3e635;
+
+  font-size: 22px;
+}
+
+.startRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  margin-top: 22px;
+}
+
+.startRow p {
+  margin: 0;
+
+  color: #808080;
+
+  font-size: 12px;
+}
+
+
+/* EXERCISES */
+
+.exerciseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 20px;
+}
+
+.exerciseCount {
+  color: #808080;
+
+  font-size: 12px;
+}
+
+.exerciseList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.exerciseCard {
+  min-height: 82px;
+
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 16px 18px;
+}
+
+.exerciseNumber {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #252525;
+
+  border: 1px solid #2e2e2e;
+  border-radius: 12px;
+
+  color: #808080;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.exerciseInfo {
+  min-width: 0;
+}
+
+.exerciseTop {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.exerciseTop h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.exerciseMeta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 7px;
+}
+
+.exerciseMeta span {
+  color: #808080;
+
+  font-size: 11px;
+}
+
+.exerciseAction {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #252525;
+
+  border: 1px solid #2e2e2e;
+  border-radius: 50%;
+
+  color: #a3e635;
+
+  font-size: 16px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.exerciseCard:hover .arrow {
+  background: #a3e635;
+  border-color: #a3e635;
+  color: #0b0b0b;
+}
+
+
+/* AI */
+
+.aiCard {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 24px 28px;
+
+  border-color: rgba(163, 230, 53, 0.18);
+}
+
+.aiIcon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: rgba(163, 230, 53, 0.1);
+
+  border: 1px solid rgba(163, 230, 53, 0.2);
+  border-radius: 14px;
+
+  color: #a3e635;
+
+  font-size: 22px;
+}
+
+.aiContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.aiContent h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+}
+
+.aiContent > p:last-child {
+  max-width: 720px;
+
+  margin: 7px 0 0;
+
+  color: #b3b3b3;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.completedExercise {
+  border-color: rgba(163, 230, 53, 0.45);
+  background: rgba(163, 230, 53, 0.06);
+}
+
+.completedExercise .exerciseNumber {
+  background: #a3e635;
+  border-color: #a3e635;
+  color: #0b0b0b;
+}
+
+.completedExercise .arrow {
+  background: #a3e635;
+  border-color: #a3e635;
+  color: #0b0b0b;
+}
+
+.missedExercise {
+  border-color: rgba(239, 68, 68, 0.45);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.missedExercise .exerciseNumber {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+}
+
+.missedExercise .arrow {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .page {
+    gap: 22px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+  .progressCard {
+    padding: 20px;
+  }
+
+  .startRow {
+    align-items: stretch;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .startRow button {
+    width: 100%;
+  }
+
+  .exerciseCard {
+    grid-template-columns: 40px 1fr auto;
+
+    gap: 12px;
+
+    padding: 14px;
+  }
+
+  .exerciseTop {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .aiCard {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 20px;
+  }
+
+  .aiCard button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}
+

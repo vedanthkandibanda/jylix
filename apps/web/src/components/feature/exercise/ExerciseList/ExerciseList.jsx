@@ -1,4 +1,4 @@
-import { ExerciseItem } from "@/components";
+import ExerciseItem from "@/components/feature/exercise/ExerciseItem/ExerciseItem";
 
 import styles from "./ExerciseList.module.css";
 

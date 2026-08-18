@@ -2,49 +2,33 @@ import styles from "./Chip.module.css";
 
 const Chip = ({
   children,
+  variant = "default",
+  size = "medium",
   selected = false,
-  removable = false,
   disabled = false,
-  onClick,
-  onRemove,
   className = "",
+  onClick,
 }) => {
   const classes = [
     styles.chip,
+    variant !== "default" ? styles[variant] : "",
     selected ? styles.selected : "",
+    size === "small" ? styles.small : "",
+    size === "large" ? styles.large : "",
     disabled ? styles.disabled : "",
     className,
   ]
     .filter(Boolean)
     .join(" ");
 
-  const handleRemove = (event) => {
-    event.stopPropagation();
-    onRemove?.();
-  };
-
   return (
     <button
       type="button"
       className={classes}
-      onClick={onClick}
       disabled={disabled}
+      onClick={onClick}
     >
-      <span className={styles.label}>
-        {children}
-      </span>
-
-      {removable && (
-        <span
-          className={styles.remove}
-          onClick={handleRemove}
-          role="button"
-          tabIndex={0}
-          aria-label="Remove Chip"
-        >
-          ×
-        </span>
-      )}
+      {children}
     </button>
   );
 };

@@ -2,17 +2,15 @@ import styles from "./Badge.module.css";
 
 const Badge = ({
   children,
-  variant = "primary",
+  variant = "neutral",
   size = "medium",
-  rounded = false,
-  icon,
   className = "",
 }) => {
   const classes = [
     styles.badge,
     styles[variant],
-    styles[size],
-    rounded ? styles.rounded : "",
+    size === "small" ? styles.small : "",
+    size === "large" ? styles.large : "",
     className,
   ]
     .filter(Boolean)
@@ -20,13 +18,7 @@ const Badge = ({
 
   return (
     <span className={classes}>
-      {icon && (
-        <span className={styles.icon}>
-          {icon}
-        </span>
-      )}
-
-      <span>{children}</span>
+      {children}
     </span>
   );
 };

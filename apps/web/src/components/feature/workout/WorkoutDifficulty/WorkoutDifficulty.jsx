@@ -1,4 +1,4 @@
-import { Badge } from "@/components";
+import Badge from "@/components/badge/Badge/Badge";
 
 const variantMap = {
   Beginner: "success",

@@ -5,7 +5,7 @@ export * from "./cards";
 export * from "./loaders";
 export * from "./navbar";
 export * from "./footer";
-export * from "./modal";
+export * from "./Modal";
 export * from "./dialog";
 export * from "./avatar";
 export * from "./badge";

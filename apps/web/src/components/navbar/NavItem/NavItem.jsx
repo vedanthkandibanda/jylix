@@ -1,33 +1,25 @@
+import { NavLink } from "react-router-dom";
 import styles from "./NavItem.module.css";
 
-const NavItem = ({
-  label,
-  href = "#",
-  active = false,
-  onClick,
-  target = "_self",
-  rel,
-  className = "",
-}) => {
-  const classes = [
-    styles.navItem,
-    active ? styles.active : "",
-    className,
-  ]
-    .filter(Boolean)
-    .join(" ");
-
+const NavItem = ({ to, icon, children }) => {
   return (
-    <a
-      href={href}
-      className={classes}
-      onClick={onClick}
-      target={target}
-      rel={target === "_blank" ? rel ?? "noopener noreferrer" : rel}
-      aria-current={active ? "page" : undefined}
+    <NavLink
+      to={to}
+      className={({ isActive }) =>
+        [
+          styles.navItem,
+          isActive ? styles.active : "",
+        ]
+          .filter(Boolean)
+          .join(" ")
+      }
     >
-      {label}
-    </a>
+      {icon && <span className={styles.icon}>{icon}</span>}
+
+      <span className={styles.label}>
+        {children}
+      </span>
+    </NavLink>
   );
 };
 

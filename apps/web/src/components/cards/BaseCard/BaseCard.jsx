@@ -3,31 +3,32 @@ import styles from "./BaseCard.module.css";
 const BaseCard = ({
   children,
   className = "",
-  as: Component = "div",
-  hoverable = false,
-  bordered = true,
+  interactive = false,
+  active = false,
   elevated = false,
+  size = "default",
   onClick,
   ...props
 }) => {
   const classes = [
     styles.card,
-    bordered && styles.bordered,
-    hoverable && styles.hoverable,
-    elevated && styles.elevated,
+    interactive ? styles.interactive : "",
+    active ? styles.active : "",
+    elevated ? styles.elevated : "",
+    size !== "default" ? styles[size] : "",
     className,
   ]
     .filter(Boolean)
     .join(" ");
 
   return (
-    <Component
+    <div
       className={classes}
       onClick={onClick}
       {...props}
     >
       {children}
-    </Component>
+    </div>
   );
 };
 

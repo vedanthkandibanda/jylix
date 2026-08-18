@@ -1,33 +1,31 @@
 import styles from "./StatCard.module.css";
 
 const StatCard = ({
-  label,
+  title,
   value,
+  subtitle,
   icon,
-  footer,
-  className = "",
+  variant = "default",
 }) => {
   return (
-    <div
-      className={`${styles.card} ${className}`}
-    >
-      {icon && (
-        <div className={styles.icon}>
-          {icon}
-        </div>
-      )}
+    <div className={`${styles.card} ${styles[variant]}`}>
+      <div className={styles.top}>
+        <span className={styles.title}>{title}</span>
 
-      <span className={styles.label}>
-        {label}
-      </span>
+        {icon && (
+          <span className={styles.icon}>
+            {icon}
+          </span>
+        )}
+      </div>
 
-      <strong className={styles.value}>
+      <div className={styles.value}>
         {value}
-      </strong>
+      </div>
 
-      {footer && (
-        <div className={styles.footer}>
-          {footer}
+      {subtitle && (
+        <div className={styles.subtitle}>
+          {subtitle}
         </div>
       )}
     </div>

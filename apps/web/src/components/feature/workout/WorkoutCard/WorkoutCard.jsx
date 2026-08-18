@@ -1,7 +1,8 @@
-import BaseCard from "../../cards/BaseCard";
-import Button from "../../buttons/Button";
-import Badge from "../../badge/Badge";
-import Chip from "../../chip/Chip";
+import { jsxDEV } from "react/jsx-dev-runtime";
+import BaseCard from "@/components/cards/BaseCard/BaseCard";
+import Button from "@/components/buttons/Button/Button";
+import Badge from "@/components/badge/Badge/Badge";
+import Chip from "@/components/chip/Chip/Chip";
 
 import styles from "./WorkoutCard.module.css";
 

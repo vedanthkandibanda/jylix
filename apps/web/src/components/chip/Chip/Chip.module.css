@@ -1,70 +1,84 @@
 .chip {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-xs);
+  justify-content: center;
+  gap: 6px;
 
-  padding: 6px 12px;
+  min-height: 32px;
+  padding: 0 12px;
 
-  border: 1px solid var(--color-border);
+  background: #151515;
+  border: 1px solid #2e2e2e;
   border-radius: 999px;
 
-  background: transparent;
-  color: var(--color-text-secondary);
+  color: #b3b3b3;
 
-  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+
+  white-space: nowrap;
 
   transition:
-    background-color var(--transition-fast),
-    border-color var(--transition-fast),
-    color var(--transition-fast),
-    transform var(--transition-fast);
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
-.chip:hover:not(:disabled) {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+.chip:hover {
+  background: #1d1d1d;
+  border-color: #444444;
+  color: #ffffff;
 }
 
-.chip:active:not(:disabled) {
-  transform: scale(0.97);
-}
-
-.chip:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 3px;
-}
+/* Selected chip */
 
 .selected {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
-  color: var(--color-background-primary);
+  background: rgba(163, 230, 53, 0.12);
+  border-color: #a3e635;
+  color: #a3e635;
 }
+
+/* AI */
+
+.ai {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.25);
+  color: #3b82f6;
+}
+
+/* Recovery */
+
+.recovery {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.25);
+  color: #8b5cf6;
+}
+
+/* Calories / challenges */
+
+.calories {
+  background: rgba(249, 115, 22, 0.1);
+  border-color: rgba(249, 115, 22, 0.25);
+  color: #f97316;
+}
+
+/* Sizes */
+
+.small {
+  min-height: 26px;
+  padding: 0 9px;
+  font-size: 11px;
+}
+
+.large {
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
+}
+
+/* Disabled */
 
 .disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.label {
-  display: flex;
-  align-items: center;
-}
-
-.remove {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 18px;
-  height: 18px;
-
-  border-radius: 50%;
-
-  transition:
-    background-color var(--transition-fast),
-    color var(--transition-fast);
-}
-
-.remove:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  opacity: 0.45;
+  pointer-events: none;
 }

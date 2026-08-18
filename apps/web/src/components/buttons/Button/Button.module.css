@@ -4,116 +4,111 @@
   justify-content: center;
   gap: 8px;
 
-  border: none;
-  cursor: pointer;
-  user-select: none;
+  min-height: 44px;
+  padding: 0 20px;
 
-  font: inherit;
-  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 16px;
 
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.2s ease,
-    box-shadow 0.25s ease;
-}
-
-/* ===========================
-   Sizes
-=========================== */
-
-.sm {
-  padding: 10px 16px;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.md {
-  padding: 12px 20px;
-  font-size: 16px;
-}
-
-.lg {
-  padding: 14px 24px;
-  font-size: 18px;
-}
-
-/* ===========================
-   Variants
-=========================== */
-
+/* Primary Jylix action */
 .primary {
-  background-color: #A3E635;
-  color: #0B0B0B;
+  background: #a3e635;
+  color: #0b0b0b;
 }
 
-.primary:hover:not(:disabled) {
-  background-color: #93D52A;
+.primary:hover {
+  background: #b4f04b;
+  box-shadow: 0 0 20px rgba(163, 230, 53, 0.12);
+  transform: translateY(-1px);
 }
 
+.primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary action */
 .secondary {
-  background-color: #252525;
-  color: #FFFFFF;
+  background: #1d1d1d;
+  border-color: #2e2e2e;
+  color: #ffffff;
 }
 
-.secondary:hover:not(:disabled) {
-  background-color: #303030;
+.secondary:hover {
+  background: #252525;
+  border-color: #a3e635;
 }
 
-.outline {
-  background: transparent;
-  border: 1px solid #A3E635;
-  color: #A3E635;
-}
-
-.outline:hover:not(:disabled) {
-  background-color: rgba(163, 230, 53, 0.1);
-}
-
-.danger {
-  background-color: #EF4444;
-  color: #FFFFFF;
-}
-
-.danger:hover:not(:disabled) {
-  background-color: #DC2626;
-}
-
+/* Ghost action */
 .ghost {
   background: transparent;
-  color: #FFFFFF;
+  color: #b3b3b3;
 }
 
-.ghost:hover:not(:disabled) {
-  background-color: rgba(255, 255, 255, 0.08);
+.ghost:hover {
+  background: #1d1d1d;
+  color: #ffffff;
 }
 
-/* ===========================
-   Utilities
-=========================== */
+/* Danger */
+.danger {
+  background: #ef4444;
+  color: #ffffff;
+}
 
+/* Disabled */
+.disabled,
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Sizes */
+.small {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.medium {
+  min-height: 44px;
+  padding: 0 20px;
+}
+
+.large {
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 18px;
+  font-size: 15px;
+}
+
+/* Full width */
 .fullWidth {
   width: 100%;
 }
 
-/* ===========================
-   States
-=========================== */
+/* Mobile */
+@media (max-width: 640px) {
+  .button {
+    min-height: 46px;
+  }
 
-.button:hover:not(:disabled) {
-  transform: translateY(-1px);
-}
-
-.button:active:not(:disabled) {
-  transform: translateY(0);
-}
-
-.button:focus-visible {
-  outline: 2px solid #A3E635;
-  outline-offset: 2px;
-}
-
-.button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
+  .large {
+    min-height: 50px;
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "name": "jylix",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "web:dev": "npm --prefix apps/web run dev",
+    "web:build": "npm --prefix apps/web run build",
+    "web:preview": "npm --prefix apps/web run preview"
+  }
+}

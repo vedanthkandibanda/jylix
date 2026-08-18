@@ -1,4 +1,4 @@
-import { MealCard } from "@/components";
+import MealCard from "@/components/feature/nutrition/MealCard/MealCard";
 
 import styles from "./MealPlan.module.css";
 

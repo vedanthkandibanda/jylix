@@ -1,4 +1,4 @@
-import { BaseCard } from "@/components";
+import BaseCard from "@/components/cards/BaseCard/BaseCard";
 
 import styles from "./ProgressTimeline.module.css";
 

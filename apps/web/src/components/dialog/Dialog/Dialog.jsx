@@ -1,6 +1,5 @@
-import Modal from "../../modal/Modal";
-import Button from "../../buttons/Button";
-
+import Modal from "@/components/Modal/Modal/Modal";
+import Button from "@/components/buttons/Button/Button";
 import styles from "./Dialog.module.css";
 
 const Dialog = ({
